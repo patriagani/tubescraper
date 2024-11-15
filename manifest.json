@@ -1,18 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "Tubescrapper",
+    "name": "Tubescraper",
     "description": "Scrap all video data in channel and export it to csv",
     "version": "1.0",
     "action": {
       "default_popup": "popup.html",
       "default_icon": "images/icon.png"
     },
-    "content_scripts": [
-      {
-        "js": ["scripts/content.js"],
-        "matches": [
-          "https://www.youtube.com/*/videos/*"
-        ]
-      }
-    ]
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["https://www.youtube.com/*"]
   }
