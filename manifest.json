@@ -8,5 +8,12 @@
       "default_icon": "images/icon.png"
     },
     "permissions": ["activeTab", "scripting"],
-    "host_permissions": ["https://www.youtube.com/*"]
+    "host_permissions": ["https://www.youtube.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
   }
